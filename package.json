@@ -9,13 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0",
+    "html-react-parser": "^4.2.2",
+    "moment": "^2.29.4",
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-multi-carousel": "^2.8.4"
   },
   "devDependencies": {
     "autoprefixer": "latest",
     "postcss": "latest",
+    "sass": "^1.68.0",
     "tailwindcss": "latest"
   }
 }
