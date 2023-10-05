@@ -1,15 +1,7 @@
 import { PostCard, Categories, PostWidget } from "@/components";
+import { getPosts } from "@/services";
 
-const posts = [
-  {
-    title: "React testing",
-    excerpt: "Learn React Testing",
-  },
-  {
-    title: "React with Tailwind",
-    excerpt: "Learn React with Tailwind",
-  },
-];
+const posts = (await getPosts()) || [];
 
 export default function Home() {
   return (
@@ -18,7 +10,7 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 col-span-1">
             {posts.map((post, index) => (
-              <PostCard post={post} key={post.title} />
+              <PostCard post={post.node} key={post.title} />
             ))}
           </div>
           <div className="lg:col-span-4 col-span-1">
